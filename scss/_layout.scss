@@ -1,9 +1,11 @@
+@use 'variaveis';
+@use 'mixins';
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: variaveis.$used-font;
 }
 
 /* ===== GRID DESKTOP ===== */
@@ -24,10 +26,8 @@ body{
 /* HEADER */
 header{
     grid-area: header;
-    background-color: rgb(129, 201, 201);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: variaveis.$cor-extremos;
+    @include mixins.alinhamentoGeral(column);
     padding: 20px;
 }
 
@@ -38,7 +38,7 @@ header h1{
 /* ASIDE */
 aside{
     grid-area: aside;
-    background-color: rgb(176, 240, 240);
+    background-color: variaveis.$cor-extremos;
 }
 
 /* MAIN */
@@ -50,7 +50,7 @@ aside{
 /* FOOTER */
 footer{
     grid-area: footer;
-    background-color: rgb(129, 201, 201);
+    background-color: variaveis.$cor-extremos;
     padding: 20px;
 }
 

@@ -1,0 +1,34 @@
+@use 'variaveis';
+@use 'mixins';
+.nav{
+    &_list{
+        @include mixins.alinhamentoGeral(column);
+        list-style: none;
+        min-height: 65vh;
+    }
+
+    &_item{
+        display: block;
+        min-width: 100%;
+    }
+
+    &_link{
+        text-align: center;
+        text-decoration: none;
+        color: rgb(5, 103, 214);
+        font-size: larger;
+        font-weight: bold;
+        padding: 1.5rem 1.5rem 1rem 1rem;
+    }
+
+    &_item--active{
+        background-color: rgb(255, 255, 255);;
+    }
+    &_link--active{
+        color: black;
+    }
+    &_link:hover{
+        color: black;
+    }
+
+}

@@ -1,0 +1,22 @@
+@use 'variaveis';
+@use 'mixins';
+.principal{
+    @include mixins.borda-geral(5px);
+    box-shadow: 5px 10px 15px;
+}
+.secs{
+    @include mixins.borda-geral(10px);
+    min-width: 100%;
+    padding: 30px;
+
+    &:hover{
+        background-color: beige;
+    }
+    &_paragrafo{
+        font-family: variaveis.$used-font;
+    }
+
+    &_paragrafo--main{
+        text-align: center;
+    }
+}

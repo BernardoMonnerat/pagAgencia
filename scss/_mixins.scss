@@ -1,0 +1,13 @@
+@use 'variaveis';
+
+@mixin borda-geral($raio){
+    border: 3px solid black;
+    border-radius: $raio;
+}
+
+@mixin alinhamentoGeral($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
